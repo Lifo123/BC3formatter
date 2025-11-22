@@ -1,0 +1,101 @@
+~V|ARKTEC,S.A.|FIEBDC-3/2002\18032004|GestCon v9.0.54|PROVINCIAS\Madrid\Barcelona\Valencia\Alava\Albacete\Alicante\Almería\Avila\Badajoz\Baleares\Burgos\Cáceres\Cádiz\Castellón\Ciudad Real\Córdoba\La Coruña\Cuenca\Gerona\Granada\Guadalajara\Guipuzcoa\Huelva\Huesca\Jaen\León\Lérida\La Rioja\Lugo\Málaga\Murcia\Navarra\Orense\Asturias\Palencia\Las Palmas\Pontevedra\Salamanca\Tenerife\Cantabria\Segovia\Sevilla\Soria\Tarragona\Teruel\Toledo\Valladolid\Vizcaya\Zamora\Zaragoza\Ceuta\Melilla\|ANSI|
+~K|0\2\2\3\2\2\2\2\EUR\|0.000\13.000\6.000\\|3\2\\3\3\\2\2\2\0\2\2\2\2\EUR\||
+~M|EAD#\EADF.2cab|1\1\1\|36.53|\Planta baja\\12.00\0.30\2.50\\\\7.00\0.30\2.50\\\\6.20\0.30\2.50\\\\12.00\0.30\2.50\\Planta alta\\3.00\0.30\2.50\\\\6.00\0.30\2.50\\\\2.50\0.30\2.50\|
+~M|EAD#\EADE.3a|1\1\2\|406.20|\\2\12.00\6.00\\\\2\23.00\5.70\\|
+~M|ECM#\ECME.1b|1\2\1\|1381.00|\Explanación chalé\\32.00\12.00\\\\\18.00\6.50\\\Pista de tenis\\40.00\22.00\\|
+~M|ECM#\ECME.5cb|1\2\2\|132.80|3\a*(b+c)/2*d\\32.00\15.00\1.20\\\\18.00\6.50\1.20\\\\12.00\17.00\6.20\|
+~M|ECM#\ECME.6a|1\2\3\|145.32|\\\15.00\7.20\0.70\\\\12.00\6.00\0.70\\\\6.00\4.00\0.70\\\\3.00\1.20\0.70\|
+~M|EISS#\EISS27d|1\3\1\|68.90|\\\15.70\\\\\\6.20\\\\\\2.30\\\\\\12.30\\\\\\14.10\\\\\\18.30\\\|
+~M|EISS#\EISA.7aca|1\3\2\|6.00|\\4\\\\\\2\\\\|
+~M|EC#\ECSZ.2aaab|1\4\1\|23.04|\\7\1.20\1.20\\\\4\1.80\1.80\\|
+~M|EC#\ECSZ.3aaaa|1\4\2\|9.21|\\7\1.20\1.20\0.40\\\4\1.80\1.80\0.40\|
+~M|EC#\ECMD.5ca|1\4\3\|44.70|\\2\2.20\\3.00\\\\7.35\\3.00\\\\3.15\\3.00\|
+~M|EEH#\EEEM.3aa|1\5\1\|59.36|\\7\3.30\1.60\\\\4\3.50\1.60\\|
+~M|EEH#\EEHS.1bdaa|1\5\2\|5.94|\\7\3.30\0.40\0.40\\\4\3.50\0.40\0.40\|
+~M|EEH#\EEHV.1bdb|1\5\3\|6.92|\\4\6.20\0.70\0.30\\\2\4.75\0.60\0.30\|
+~M|EEH#\EEHF.6babc|1\5\4\|73.44|\\\7.40\3.60\\\\\12.00\3.90\\|
+~M|EEH#\EEHW.1ab|1\5\5\|38.73|3\a*b*p*(c/2000)*(c/2000)*7850\6\7.20\6.00\7850.00\\\4\3.15\16.00\7850.00\\\2\1.20\25.00\7850.00\|
+~M|EEH#\EEEM.9ab|1\5\6\|1.00|\Arco central\\0.40\\\\Arcos laterales\2\0.30\\\|
+~M|EFF#\EFFC25lacb|2\1\1\|64.52|\\\12.30\\3.30\\\\7.25\\3.30\|
+~M|EFF#\EFFC19bba|2\1\2\|363.35|\Fachada Norte\\124.64\\2.50\\Fachada Sur\\17.00\\2.50\\\\3.70\\2.50\|
+~M|EQ#\EQAT.2aabe|2\2\1\|123.00|\\\17.00\3.00\\\\\12.00\6.00\\|
+~M|EQ#\EQTC12a|2\2\2\|83.00|\\\12.00\3.00\\\\\7.00\3.20\\\\\6.15\4.00\\|
+~M|ERS#\ERSR.4bka|2\3\1\|73.44|\\\7.40\3.60\\\\\12.00\3.90\\|
+~M|ERS#\ERSR.9aba|2\3\2\|32.43|\Cocina\\6.00\4.20\\\\\2.00\1.20\\\Cuarto de baño\\3.45\1.40\\|
+~M|ER#\ERPA.1aca|3\1\1\|188.25|\Cocina\4\12.60\\2.50\\\2\7.20\\2.50\\Cuarto de baño\3\3.50\\2.50\|
+~M|ER#\ERPC.6db|3\1\2\|96.51|\Fachada Norte\\15.00\\2.50\\Fachada Sur\\17.00\\2.50\\\\3.70\\2.50\\\\4.00\\\\\\3.26\\\|
+~M|EFVM#\EFVM.1bib|3\2\1\|12.00||
+~M|EFVM#\EFPM.2bdfa|3\2\2\|12.00||
+~M|EFVM#\EFPM14bca|3\2\3\|2.00||
+~M|EFA#\EFAD.5abab|3\3\1\|12.96|\\6\1.50\\1.20\\\2\0.90\\1.20\|
+~M|EIE#\EIEB14a|3\4\1\|15.00||
+~M|EIE#\EIEB14b|3\4\2\|3.00||
+~M|EIE#\EIEB16abdd|3\4\3\|23.00||
+~M|EIFF#\EIFF19abb|3\5\1\|31.15|\\\12.00\\\\\\6.20\\\\\\3.40\\\\\4\1.20\\\\\\4.75\\\|
+~M|EIFF#\EIFS.8cba|3\5\2\|1.00||
+~M|EIFF#\EIFS10dbaa|3\5\3\|1.00||
+~M|EIFF#\EIFS.6abaa|3\5\4\|1.00||
+~C|ejemplo##\||BASE EJEMPLO|0.00\|21012002\|0|||
+~D|ejemplo##|_01#\\1.000\_02#\\1.000\_03#\\1.000\|
+~C|_01#\||PRIMERA FASE|0.00\|21012002\|0|||
+~D|_01#|EAD#\\1.000\ECM#\\1.000\EISS#\\1.000\EC#\\1.000\EEH#\\1.000\|
+~Q|_01#\|\ESMD____1\\|
+~C|EAD#\||Derribos|0.00\|21012002\|0|||
+~D|EAD#|EADF.2cab\\36.530\EADE.3a\\406.200\|
+~Q|EAD#\|DES\EAD______1\\PRE\EAD______2\\COM\EAD______3\\EJE\EAD______4\\NOR\EAD______5\\CON\EAD______6\\SEG\EAD______7\\|
+~J|EAD______1|     Operaciones destinadas a la demolición total o parcial de un edificio o de un elemento constructivo.|{\rtf1\ansi{\fonttbl{\f0\fnil Arial;}{\f1\fnil Arial;}{\f2\fnil Arial;}{\f3\fnil Arial;}{\f4\fnil Arial;}{\f5\fnil Arial;}{\f6\fnil Arial;}{\f7\fmodern Courier New;}{\f8\fmodern Courier New;}{\f9\fmodern Courier New;}{\f10\fnil MS Sans Serif;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue255;\red0\green0\blue255;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;}\deflang1034\pard \plain \f10\fs16\cf11      Operaciones destinadas a la demolición total o parcial de un edificio o de un elemento constructivo.}|
+~J|EAD______2|        -  Rodear el edificio con vallas, verjas o muros; cuando la construcción se sitúe en una zona urbana y su altura sea superior a cinco metros (5 m.), la altura de la valla, verja o muro no será menor de dos metros (2 m.).
+        -  Las vallas se situarán a una distancia del edificio no menor de ciento cincuenta centímetros (150 cm.). Cuando dificulten el paso, se dispondrá a lo largo del cerramiento, luces rojas separadas entre si, a una distancia no mayor de diez metros (10 m.) y en las esquinas.
+        -  Se desconectarán las diferentes instalaciones del edificio, tales como agua, electricidad y teléfono, neutralizándose sus acometidas.
+        -  Se protegerán los elementos de servicio público que puedan ser afectados como bocas de riego, tapas y sumideros de alcantarillas, árboles, farolas, etc.
+        -  Se desinsectará o desinfectará si es un edificio abandonado.
+        -  Se comprobará que no exista almacenamiento de materiales combustibles, explosivos o peligrosos.
+
+     Reconomiento previo, por parte de la Dirección Técnica, del estado actual de las instalaciones, estructura, estado de conservación, estado de la edificaciones colindantes o medianeras.
+
+     Un inspección previa es indispensables, a fin de comprobar el estado de resistencia de las diferentes partes del edificio.|{\rtf1\ansi{\fonttbl{\f0\fnil Arial;}{\f1\fnil Arial;}{\f2\fnil Arial;}{\f3\fnil Arial;}{\f4\fnil Arial;}{\f5\fnil Arial;}{\f6\fnil Arial;}{\f7\fmodern Courier New;}{\f8\fmodern Courier New;}{\f9\fmodern Courier New;}{\f10\fnil MS Sans Serif;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue255;\red0\green0\blue255;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;}\deflang1034\pard \plain \f10\fs16\cf11         -  Rodear el edificio con vallas, verjas o muros; cuando la construcción se sitúe en una zona urbana y su altura sea superior a cinco metros (5 m.), la altura de la valla, verja o muro no será menor de dos metros (2 m.).
+\par         -  Las vallas se situarán a una distancia del edificio no menor de ciento cincuenta centímetros (150 cm.). Cuando dificulten el paso, se dispondrá a lo largo del cerramiento, luces rojas separadas entre si, a una distancia no mayor de diez metros (10 m.) y en las esquinas.
+\par         -  Se desconectarán las diferentes instalaciones del edificio, tales como agua, electricidad y teléfono, neutralizándose sus acometidas.
+\par         -  Se protegerán los elementos de servicio público que puedan ser afectados como bocas de riego, tapas y sumideros de alcantarillas, árboles, farolas, etc.
+\par         -  Se desinsectará o desinfectará si es un edificio abandonado.
+\par         -  Se comprobará que no exista almacenamiento de materiales combustibles, explosivos o peligrosos.
+\par 
+\par      Reconomiento previo, por parte de la Dirección Técnica, del estado actual de las instalaciones, estructura, estado de conservación, estado de la edificaciones colindantes o medianeras.
+\par 
+\par      Un inspección previa es indispensables, a fin de comprobar el estado de resistencia de las diferentes partes del edificio.}|
+~J|EAD______3|     Los materiales producidos durante el derribo.|{\rtf1\ansi{\fonttbl{\f0\fnil Arial;}{\f1\fnil Arial;}{\f2\fnil Arial;}{\f3\fnil Arial;}{\f4\fnil Arial;}{\f5\fnil Arial;}{\f6\fnil Arial;}{\f7\fmodern Courier New;}{\f8\fmodern Courier New;}{\f9\fmodern Courier New;}{\f10\fnil MS Sans Serif;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue255;\red0\green0\blue255;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;}\deflang1034\pard \plain \f10\fs16\cf11      Los materiales producidos durante el derribo.}|
+~J|EAD______4|     En la ejecución se incluyen dos operaciones:
+
+        -  Derribo.
+        -  Retirada de los materiales de derribo.
+
+     Según el procedimiento de ejecución se establecen los siguientes:
+
+        -  Demolición elemento a elemento, cuando los trabajos se efectúan siguiendo un orden que en general corresponde al orden inverso seguido para la construcción.
+        -  Demolición por colapso, puede efectuarse mediante empuje, por impacto de bola de gran masa o mediante uso de explosivos.
+
+     Las operaciones de derribo se efectuarán con las precauciones necesarias para lograr una condiciones de seguridad suficientes y evitar daños en las construcciones próximas, de acuerdo con lo que sobre el particular ordene el Director de las obras, quien designará y marcará los elementos que hay que conservar intactos.
+
+     Los trabajos se realizarán de forma que produzcan la menor molestia posible a los ocupantes de las zonas próximas a la obra a derribar.
+
+     En tanto se efectúe la consolidación definitiva, en el solar donde se haya realizado la demolición, se conservarán las contenciones, apuntalamientos y apeos realizados para la sujeción de las edificaciones medianeras, así como las vallas y/o cerramientos.
+
+     En la superficie del solar se mantendrá el desagüe necesario, para impedir la acumulación de agua de lluvia o nieve, que pueda perjudicar a locales o cimentaciones de fincas colindantes.
+
+     Se dispondrá en obra, para proporcionar en cada caso el equipo indispensable al operario, de una provisión de palancas, cuñas, barras, puntales, picos, tablones, bridas, cables con terminales de fábrica como gazas o ganchos y lonas o plásticos así como cascos, gafas antifragmento, careta antichispa, botas de suela dura y otros medios que puedan servir para eventualidades o socorrer a los operarios que puedan accidentarse. En edificios con estructura de madera o con abundancia de material combustible se dispondrá, como mínimo, de un extintor manual contra incendios.
+
+     No se permitirán hogueras dentro del edificio y las exteriores estarán protegidas del viento y vigiladas. En ningún caso se utilizará el fuego con propagación de llama como medio de demolición.
+
+     Durante la demolición, si aparecieran grietas en los edificios medianeros se colocarán testigos, a fin de observar los posibles efectos de la demolición y efectuar su apuntalamiento o consolidación si fuese necesario.
+
+     No se suprimirán los elementos atirantados o de arriostramiento en tanto no se supriman o contrarresten las tensiones que inciden sobre ellos.
+
+     En elementos metálicos en tensión se tendrá presente el efecto de oscilación al realizar el corte o al suprimir las tensiones.
+
+     El corte o desmontaje de un elemento, no manejable por una sola persona, se realizará manteniéndolo suspendido o apuntalado, evitando caídas bruscas y vibraciones que se transmitan al resto del edificio o a los mecanismos de suspensión.
+
+     No se acumulará escombro ni se apoyarán elementos contra vallas, muros y soportes, propios o medianeros, mientras éstos deban permanecer en pie.
+
+     Al finalizar la jornada no deben quedar elementos del edificio en estado inestable que el viento, las condiciones atmosféricas u otras causas puedan provocar su derrumbamiento. Se protegerán de la lluvia mediante lonas o plásticos, las zonas o elementos del edificio que puedan ser afectados por aquella.
+
+     El abatimiento de un elemento constructivo, se realizará 
