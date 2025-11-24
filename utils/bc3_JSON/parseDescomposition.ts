@@ -1,8 +1,12 @@
-import { Bc3RawData, BC3_DecompositionChild } from "../../types/BC3.types";
+import { Bc3RawData, BC3_DecompositionChild, BC3_Info } from "../../types/BC3.types";
 import { cleanString } from "../Helpers";
 
 
-export function parseDescomposition(lineItems: string[], decompositions: Bc3RawData['decompositions']) {
+export function parseDescomposition(
+  lineItems: string[],
+  decompositions: Bc3RawData['decompositions'],
+  info: BC3_Info
+) {
   const parentCode = cleanString(lineItems[1]);
   if (!parentCode) return;
 
@@ -11,6 +15,10 @@ export function parseDescomposition(lineItems: string[], decompositions: Bc3RawD
   if (content) {
     const childParts = content.split('\\');
     const currentChilds: BC3_DecompositionChild[] = [];
+
+    if (parentCode.endsWith('##')) {
+      info.rootCode = parentCode;
+    }
 
     for (let j = 0; j < childParts.length; j += 3) {
       if (j + 2 >= childParts.length) break;

@@ -58,7 +58,7 @@ export function parseBC3(buffer: Uint8Array) {
         break;
       case 'D':
       case 'Y':
-        parseDescomposition(lineItems, data.decompositions);
+        parseDescomposition(lineItems, data.decompositions, data.info);
         break;
       case 'T':
         parseTexts(lineItems, data.texts);

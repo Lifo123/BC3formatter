@@ -89,6 +89,8 @@ export interface BC3_Info {
   labels?: string[];
   comments?: string[];
 
+  rootCode?: string;
+
   params?: {
     decimals: Record<string, {
       dn: number;

@@ -11,7 +11,6 @@ export function parseConcepts(lineItems: string[], concepts: Bc3RawData['concept
   const aliases = rawCodes.slice(1);
 
   const isChapter = mainCodeRaw.endsWith('#');
-  const isRoot = mainCodeRaw.endsWith('##');
 
   const prices = parseNumberList(lineItems[4]);
   const dates = parseList(lineItems[5]);

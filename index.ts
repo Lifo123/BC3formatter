@@ -4,6 +4,7 @@ export {
 
 export {
   cleanString, validateBC3File,
+  BC3_FlatNode,
 } from './utils/Helpers/index'
 
 
