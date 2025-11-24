@@ -5,3 +5,6 @@ export {
 export {
   cleanString, validateBC3File,
 } from './utils/Helpers/index'
+
+
+export type * from './types/index'

@@ -7,8 +7,19 @@ import {
   parseMeasurements,
   parseTechnicalInfo,
   parseResiduals,
-  parseAttachments
+  parseAttachments,
+  parseParametrics
 } from '../utils/bc3_JSON/index';
+
+/**
+ * @param buffer
+ * @returns { Bc3RawData }
+ * * @example
+ * function onFileChange = async (file) => {
+ *    const buffer = await file.arrayBuffer();
+ *    const data = parseBC3(new Uint8Array(buffer));
+ * };
+ */
 
 export function parseBC3(buffer: Uint8Array) {
   const decoder = new TextDecoder('windows-1252');
@@ -19,6 +30,7 @@ export function parseBC3(buffer: Uint8Array) {
     concepts: {},
     decompositions: {},
     texts: {},
+    parametrics: {},
     measurements: {},
 
     technicalInfo: { ref: {}, values: {} },
@@ -26,11 +38,15 @@ export function parseBC3(buffer: Uint8Array) {
     attachments: {},
   };
 
-  const lines = content.split('~');
+  const records = content.split('~');
 
-  for (let i = 0; i < lines.length; i++) {
-    const lineItems = lines[i].split('|');
-    const recordType = lineItems[0].toUpperCase();
+  for (let i = 0; i < records.length; i++) {
+    const record = records[i];
+
+    if (!record || record.trim() === '') continue;
+
+    const lineItems = record.split('|');
+    const recordType = lineItems[0].trim().toUpperCase();
 
     switch (recordType) {
       case 'V':
@@ -45,8 +61,10 @@ export function parseBC3(buffer: Uint8Array) {
         parseDescomposition(lineItems, data.decompositions);
         break;
       case 'T':
-      case 'P':
         parseTexts(lineItems, data.texts);
+        break;
+      case 'P':
+        parseParametrics(lineItems, data.parametrics);
         break;
       case 'M':
       case 'N':
@@ -67,6 +85,16 @@ export function parseBC3(buffer: Uint8Array) {
       default:
         break;
     }
+  }
+
+  for (const code in data.concepts) {
+    const concept = data.concepts[code];
+
+    concept.hasDecomposition = !!data.decompositions[code];
+    concept.hasMeasurements = !!data.measurements[code];
+    concept.hasTechnicalInfo = !!data.technicalInfo?.values?.[code];
+    concept.hasResiduals = !!data.residuals?.[code];
+    concept.hasAttachments = !!data.attachments?.[code];
   }
 
   return data

@@ -1,24 +1,28 @@
-import { BC3_Concept, BC3_Decomp } from "../../types/BC3.types";
+import { Bc3RawData, BC3_DecompositionChild } from "../../types/BC3.types";
 import { cleanString } from "../Helpers";
 
 
-export function parseDescomposition(lineItems: string[], decompositions: BC3_Concept['decompositions']) {
+export function parseDescomposition(lineItems: string[], decompositions: Bc3RawData['decompositions']) {
   const parentCode = cleanString(lineItems[1]);
+  if (!parentCode) return;
+
   const content = lineItems[2];
 
   if (content) {
-    const childlineItems = content.split('\\');
-    const currentChilds: BC3_Decomp['childs'] = [];
+    const childParts = content.split('\\');
+    const currentChilds: BC3_DecompositionChild[] = [];
 
-    for (let j = 0; j < childlineItems.length; j += 3) {
-      const childCode = childlineItems[j]?.trim();
+    for (let j = 0; j < childParts.length; j += 3) {
+      if (j + 2 >= childParts.length) break;
+
+      const childCode = childParts[j]?.trim();
 
       if (!childCode) continue;
 
       currentChilds.push({
         code: childCode,
-        factor: parseFloat(childlineItems[j + 1]) || 1.0,
-        yield: parseFloat(childlineItems[j + 2]) || 1.0,
+        factor: parseFloat(childParts[j + 1]) || 1.0,
+        yield: parseFloat(childParts[j + 2]) || 1.0,
       });
     }
 

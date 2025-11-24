@@ -1,6 +1,6 @@
-export type BC3_Currency = 'EUR' | 'USD' | 'PEN' | 'JPY' | 'GBP' | 'CAD' | 'AUD' | 'CLP' | 'MXN' | 'BRL' | 'RUB' | 'CNY' | string;
+import { BC3_Currency } from "./General.types";
 
-export type BC3_Row_Concept = {
+export type BC3_ConceptData = {
   code: string;
   unit?: string;
   summary?: string;
@@ -8,33 +8,45 @@ export type BC3_Row_Concept = {
   date?: string;
   type?: number;
   typeSigla?: string;
+
+  //Information
+  aliases?: string[];
+  prices?: number[];
+  dates?: string[];
+
+  //Booleans
+  isChapter?: boolean;
+  isRoot?: boolean;
+  hasDecomposition?: boolean;
+  hasMeasurements?: boolean;
+  hasTechnicalInfo?: boolean;
+  hasResiduals?: boolean;
+  hasAttachments?: boolean;
 }
 
-export type BC3_Decomp = {
-  parentCode?: string;
-  childs?: {
-    code: string;
-    factor?: number;
-    yield?: number;
-  }[]
+export type BC3_DecompositionChild = {
+  code: string;
+  factor: number;
+  yield: number;
+  percentCode?: string;
+}
+
+export type BC3_MeasurementLine = {
+  type?: string;
+  comment?: string;
+  units?: number;
+  length?: number;
+  width?: number;
+  height?: number;
+  bimId?: string;
 }
 
 export type BC3_Measurement = {
   parentCode?: string;
   childCode: string;
   position?: number[];
-
   total: number;
-
-  lines: {
-    type?: string;
-    comment?: string;
-    units?: number;
-    length?: number;
-    height?: number;
-    width?: number;
-    bimId?: string;
-  }[];
+  lines: BC3_MeasurementLine[];
   tag?: string;
 }
 
@@ -46,7 +58,7 @@ export type BC3_TechInfo = {
   values?: Record<string, Record<string, number | string>>
 }
 
-export type BC3_Residuals = {
+export type BC3_Residual = {
   type?: number;
   code?: string;
   props?: Record<string, {
@@ -62,35 +74,24 @@ export type BC3_Attachment = {
   url?: string;
 }
 
-// ~[C, D, Y, T, P, L, Q, J, X...]
-export interface BC3_Concept {
-  concepts: Record<string, BC3_Row_Concept>; // ~C
-  decompositions: Record<string, BC3_Decomp['childs']>; // ~D, ~Y
-  texts?: Record<string, string>; // ~T, ~P
-  measurements?: Record<string, BC3_Measurement>; // ~M, ~N
-
-  // (Modern FIEBDC)
-  technicalInfo?: BC3_TechInfo; // ~X
-  residuals?: Record<string, BC3_Residuals[]>; // ~R
-  attachments?: Record<string, BC3_Attachment[]>; // ~F, ~G
-}
-
 // ~[V, K]
 export interface BC3_Info {
   owner?: string;
   formatVersion?: string;
   fromSoftware?: string;
-  headerId?: string;
   encoding?: string;
 
-  comment?: string;
   typeInfo?: string;
   numberCertified?: string;
   dateCertified?: string;
   baseURL?: string;
 
+  headers?: string[];
+  labels?: string[];
+  comments?: string[];
+
   params?: {
-    decimals: {
+    decimals: Record<string, {
       dn: number;
       dd: number;
       ds: number;
@@ -100,7 +101,7 @@ export interface BC3_Info {
       dc: number;
       dm: number;
       currency: BC3_Currency;
-    };
+    }>;
     percentages: {
       indirectCost?: number;
       generalCost?: number;
@@ -108,7 +109,7 @@ export interface BC3_Info {
       baja?: number;
       tax?: number;
     };
-    currencies?: {
+    currencies?: Record<string, {
       drc?: number;
       dc?: number;
       dfs?: number;
@@ -122,11 +123,22 @@ export interface BC3_Info {
       dsp?: number;
       dec?: number;
       currency?: BC3_Currency
-    }[];
+    }>;
     n: number;
   };
 }
 
 export type Bc3RawData = {
   info: BC3_Info;
-} & BC3_Concept;
+
+  concepts: Record<string, BC3_ConceptData>;
+  decompositions: Record<string, BC3_DecompositionChild[]>;
+
+  texts: Record<string, string>;
+  parametrics: Record<string, string>;
+  measurements: Record<string, BC3_Measurement>;
+
+  technicalInfo?: BC3_TechInfo;
+  residuals?: Record<string, BC3_Residual[]>;
+  attachments?: Record<string, BC3_Attachment[]>;
+}

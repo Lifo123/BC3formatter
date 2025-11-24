@@ -1,11 +1,10 @@
-import { BC3_Concept, BC3_Residuals } from "../../types/BC3.types";
+import { Bc3RawData, BC3_Residual } from "../../types/BC3.types";
 import { cleanString } from "../Helpers";
 
-export function parseResiduals(lineItems: string[], residuals: BC3_Concept['residuals']) {
-  if (!residuals) return;
+export function parseResiduals(lineItems: string[], residuals: Bc3RawData['residuals']) {
   const parentCode = cleanString(lineItems[1]);
 
-  if (!parentCode) return;
+  if (!residuals || !parentCode) return;
 
   if (!residuals[parentCode]) {
     residuals[parentCode] = [];
@@ -23,7 +22,7 @@ export function parseResiduals(lineItems: string[], residuals: BC3_Concept['resi
 
       if (!childCode) continue;
 
-      const props: BC3_Residuals['props'] = {};
+      const props: BC3_Residual['props'] = {};
 
       for (let k = 2; k < subParts.length; k += 3) {
         const propName = subParts[k]?.trim();

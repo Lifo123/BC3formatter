@@ -1,20 +1,28 @@
-# BC3formatter
+# BC3reader
 
 A package to read BC3 files in Javascript to parse and convert them to JSON.
 
 ## Installation
 
 ```bash
-npm install bc3formatter
+npm install bc3reader
 ```
 
 ## Usage
 
 ```typescript
-import { parseBC3 } from 'bc3formatter';
+import { parseBC3 } from 'bc3reader';
 
-// Only accepts a buffer, use validateBC3File to check if the file is a BC3 file
-const bc3Data = parseBC3(fileBuffer);
+  const handleUpload = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    // 1. Get the buffer
+    const arrayBuffer = await file.arrayBuffer();
+
+    // 2. Parse it
+    const data = parseBC3(new Uint8Array(arrayBuffer));
+  };
 ```
 
 ## License

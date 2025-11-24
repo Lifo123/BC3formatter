@@ -1,10 +1,10 @@
-import { BC3_Concept } from "../../types/BC3.types";
+import { Bc3RawData } from "../../types/BC3.types";
 import { cleanString } from "../Helpers";
 
+// ~[T]
+export function parseTexts(lineItems: string[], texts: Bc3RawData['texts']) {
+  const conceptId = cleanString(lineItems[1]);
+  if (!conceptId || !texts) return;
 
-export function parseTexts(lineItems: string[], texts: BC3_Concept['texts']) {
-  if (texts) {
-    const conceptId = cleanString(lineItems[1]);
-    texts[conceptId] = lineItems[2]?.trim();
-  }
+  texts[conceptId] = lineItems[2]?.trim();
 }

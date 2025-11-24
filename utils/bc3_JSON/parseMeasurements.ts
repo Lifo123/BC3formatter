@@ -1,10 +1,11 @@
-import { BC3_Concept, BC3_Measurement } from "../../types/BC3.types";
+import { Bc3RawData, BC3_Measurement } from "../../types/BC3.types";
 import { cleanString } from "../Helpers";
 
-export function parseMeasurements(lineItems: string[], measurements: BC3_Concept['measurements']) {
-  if (!measurements) return;
+export function parseMeasurements(lineItems: string[], measurements: Bc3RawData['measurements']) {
+  const rawCode = lineItems[1];
 
-  const rawCode = lineItems[1] || '';
+  if (!measurements || !rawCode) return;
+
   const recordType = lineItems[0].toUpperCase();
 
   let parentCode: string | undefined;
@@ -44,18 +45,18 @@ export function parseMeasurements(lineItems: string[], measurements: BC3_Concept
 
       const u = parseFloat(childParts[j + 2]);
       const l = parseFloat(childParts[j + 3]);
-      const h = parseFloat(childParts[j + 4]);
-      const w = parseFloat(childParts[j + 5]);
+      const w = parseFloat(childParts[j + 4]);
+      const h = parseFloat(childParts[j + 5]);
 
       if (childParts[j] || commentRaw || !isNaN(u)) {
         parsedLines.push({
           type: childParts[j]?.trim(),
           comment: commentParts[0],
-          bimId: commentParts[1],
+          bimId: commentParts[1]?.trim(),
           units: isNaN(u) ? undefined : u,
           length: isNaN(l) ? undefined : l,
-          height: isNaN(h) ? undefined : h,
           width: isNaN(w) ? undefined : w,
+          height: isNaN(h) ? undefined : h,
         });
       }
     }

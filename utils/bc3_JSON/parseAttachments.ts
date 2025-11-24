@@ -1,12 +1,12 @@
-import { BC3_Concept } from "../../types/BC3.types";
+import { Bc3RawData } from "../../types/BC3.types";
 import { cleanString } from "../Helpers";
 
-export function parseAttachments(lineItems: string[], attachments: BC3_Concept['attachments']) {
-  if (!attachments) return;
+export function parseAttachments(lineItems: string[], attachments: Bc3RawData['attachments']) {
   const conceptCode = cleanString(lineItems[1]);
-  const recordType = lineItems[0].toUpperCase();
 
-  if (!conceptCode) return;
+  if (!attachments || !conceptCode) return;
+
+  const recordType = lineItems[0].toUpperCase();
 
   if (!attachments[conceptCode]) {
     attachments[conceptCode] = [];
@@ -24,9 +24,9 @@ export function parseAttachments(lineItems: string[], attachments: BC3_Concept['
 
         if (file) {
           attachments[conceptCode]!.push({
-            type: 13, // 13 = Imagen (Estándar FIEBDC)
+            type: 13, //Standard Image
             fileName: file,
-            description: 'Gráfico',
+            description: '',
             url: urlExt
           });
         }
