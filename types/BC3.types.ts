@@ -16,7 +16,6 @@ export type BC3_ConceptData = {
 
   //Booleans
   isChapter?: boolean;
-  isRoot?: boolean;
   hasDecomposition?: boolean;
   hasMeasurements?: boolean;
   hasTechnicalInfo?: boolean;

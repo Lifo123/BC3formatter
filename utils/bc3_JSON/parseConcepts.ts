@@ -10,8 +10,8 @@ export function parseConcepts(lineItems: string[], concepts: Bc3RawData['concept
   const codeKey = cleanString(mainCodeRaw);
   const aliases = rawCodes.slice(1);
 
-  const isRoot = mainCodeRaw.endsWith('##');
   const isChapter = mainCodeRaw.endsWith('#');
+  const isRoot = mainCodeRaw.endsWith('##');
 
   const prices = parseNumberList(lineItems[4]);
   const dates = parseList(lineItems[5]);
@@ -34,7 +34,6 @@ export function parseConcepts(lineItems: string[], concepts: Bc3RawData['concept
     type: parseInt(lineItems[6]) || 0,
     typeSigla: lineItems[7]?.trim(),
 
-    isRoot,
     isChapter,
   };
 }
